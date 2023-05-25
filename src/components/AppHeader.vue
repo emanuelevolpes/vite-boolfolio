@@ -1,6 +1,15 @@
 <template>
     <header>
-        <div>header</div>
+        <nav>
+            <div class="d-flex justify-content-between p-3">
+                <div class="logo">
+                    Logo
+                </div>
+                <div class="menu">
+                    Menù
+                </div>
+            </div>
+        </nav>
     </header>
 </template>
 
@@ -8,7 +17,10 @@
 export default {
 
 }
-
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+nav {
+    background-color: pink;
+}
+</style>
