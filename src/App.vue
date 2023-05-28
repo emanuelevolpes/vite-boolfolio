@@ -39,7 +39,7 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain/>
+  <AppMain :data="projects"/>
   <AppFooter />
 </template>
 
