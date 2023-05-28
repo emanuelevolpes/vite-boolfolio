@@ -14,11 +14,12 @@ export default {
         }
     },
     methods: {
-        getProjects() {
+        getProject() {
       axios
         .get(this.apiBaseUrl + this.apiUrls.projects + "/" + this.$route.params.slug)
         .then((response) => {
           this.project = response.data.return;
+          // console.log(response);
         }).catch((error) => {
           console.log(error);
           this.isError = true;
@@ -27,7 +28,7 @@ export default {
     }
   },
   created() {
-    this.getProjects();
+    this.getProject();
   }
 }
 </script>
