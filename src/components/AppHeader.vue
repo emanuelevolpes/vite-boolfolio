@@ -18,8 +18,8 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link :to="{ name: 'projects' }" class="nav-link">
-                                Projects
+                            <router-link :to="{ name: 'blog' }" class="nav-link">
+                                Blog
                             </router-link>
                         </li>
                     </ul>

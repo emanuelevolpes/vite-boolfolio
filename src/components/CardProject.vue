@@ -5,7 +5,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <router-link :to="{ name: 'project', params: { slug: project.slug } }" class="btn btn-primary">Details</router-link>
             </div>
         </div>
     </main>
