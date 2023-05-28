@@ -8,7 +8,7 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            conponent: AppHome
+            component: AppHome
         }
     ]
 })
