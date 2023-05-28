@@ -6,9 +6,18 @@
                     Logo
                 </div>
                 <div class="menu">
-                    <router-link :to="{ name: 'home' }" class="nav-link">
-                        Home
-                    </router-link>
+                    <ul class="list-unstyled m-0 p-0 gap-2 d-flex">
+                        <li>
+                            <router-link :to="{ name: 'home' }" class="nav-link">
+                                Home
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{ name: 'about' }" class="nav-link">
+                                About us
+                            </router-link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -17,7 +26,7 @@
 
 <script>
 export default {
-name: 'AppHeader'
+    name: 'AppHeader'
 }
 </script>
 
