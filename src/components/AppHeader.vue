@@ -6,7 +6,9 @@
                     Logo
                 </div>
                 <div class="menu">
-                    Menù
+                    <router-link :to="{ name: 'home' }" class="nav-link">
+                        Home
+                    </router-link>
                 </div>
             </div>
         </nav>
@@ -15,7 +17,7 @@
 
 <script>
 export default {
-
+name: 'AppHeader'
 }
 </script>
 
