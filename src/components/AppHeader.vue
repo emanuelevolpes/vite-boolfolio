@@ -1,12 +1,12 @@
 <template>
     <header>
         <nav>
-            <div class="d-flex justify-content-between p-3">
-                <div class="logo">
-                    Logo
+            <div class="container_nav">
+                <div class="logo_nav_container">
+                    <img class="logo" src="../images/Logo - volpe.svg" alt="Logo">
                 </div>
-                <div class="menu">
-                    <ul class="list-unstyled m-0 p-0 gap-2 d-flex">
+                <div class="menu_nav">
+                    <ul>
                         <li>
                             <router-link :to="{ name: 'home' }" class="nav-link">
                                 Home
@@ -37,6 +37,32 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-    background-color: pink;
+    background-color: transparent;
+
+    .logo {
+        height: 50px;
+    }
+
+    .container_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .menu_nav>ul{
+        display: flex;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .menu_nav>ul>li>.nav-link{
+        padding: 10px;
+        font-size: 20px;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }
 </style>
