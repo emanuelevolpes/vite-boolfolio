@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <img v-if="project.image" :src="project.image" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
