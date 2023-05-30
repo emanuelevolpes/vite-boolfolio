@@ -1,15 +1,18 @@
 <template>
     <section>
-        <h1 class="text-center p-4">ABOUT US</h1>
+        <h1 class="text-center p-4">ABOUT</h1>
+        <ul>
+            <li>
+                <router-link :to="{ name: 'linkedin' }" class="nav-link">Linkedin</router-link>
+            </li>
+        </ul>
     </section>
 </template>
 
 <script>
-    export default{
-        name: 'AboutPage'
-    }
+export default {
+    name: 'AboutPage'
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
