@@ -14,7 +14,7 @@ const router = createRouter({
             component: AppHome
         },
         {
-            path: '/about-us',
+            path: '/about',
             name: 'about',
             component: AboutPage
         },
@@ -27,6 +27,14 @@ const router = createRouter({
             path: '/project/:slug',
             name: 'project',
             component: ProjectPage
+        },
+        {
+            path: '/linkedin',
+            name: 'linkedin',
+            component: AboutPage,
+            beforeEnter(to, from, next) {
+                window.location.href = "https://www.linkedin.com/in/emanuelevolpes/";
+              }
         }
     ]
 })
