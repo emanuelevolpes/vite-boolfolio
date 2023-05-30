@@ -14,6 +14,10 @@ export default {
     }
   },
   methods: {
+    commentDate(comment_date) {
+      const commentDate = new Date(comment_date);
+      return commentDate.toLocaleString();
+    },
     getProject() {
       axios
         .get(this.apiBaseUrl + this.apiUrls.projects + "/" + this.$route.params.slug)
@@ -36,9 +40,26 @@ export default {
 
 <template>
   <section v-if="project">
-    <div class="container text-center">
+    <div class="container">
       <h1 class="mt-5 mb-3">{{ project.title }}</h1>
+      <hr>
       <p>{{ project.description }}</p>
+      <hr>
+      <div class="my-3">
+        <h3>Comments</h3>
+        <ul>
+          <li v-for="comment in project.comments">
+            <div>
+              <h4>{{ comment.author ?? 'Unknown User' }}</h4>
+              <small>{{ commentDate(comment.created_at) }}</small>
+              <p>{{ comment.content }}</p>
+            </div>
+          </li>
+        </ul>
+        <div>
+          form per inserimento commento
+        </div>
+      </div>
     </div>
   </section>
   <section v-if="isError">
