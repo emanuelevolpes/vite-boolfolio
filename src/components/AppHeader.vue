@@ -14,7 +14,7 @@
                         </li>
                         <li>
                             <router-link :to="{ name: 'about' }" class="nav-link">
-                                About us
+                                About
                             </router-link>
                         </li>
                         <li>
