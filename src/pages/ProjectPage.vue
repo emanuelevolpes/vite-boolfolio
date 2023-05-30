@@ -19,7 +19,9 @@ export default {
   },
   methods: {
     sendComment() {
-      console.log(this.formData); 
+      console.log(this.formData.author); 
+      console.log(this.formData.content); 
+      console.log(this.project.id);
     },
     commentDate(comment_date) {
       const commentDate = new Date(comment_date);
