@@ -19,9 +19,27 @@ export default {
   },
   methods: {
     sendComment() {
-      console.log(this.formData.author); 
-      console.log(this.formData.content); 
+      console.log(this.formData.author);
+      console.log(this.formData.content);
       console.log(this.project.id);
+
+      const data = {
+        author: this.formData.author,
+        content: this.formData.content,
+        project_id: this.project.id
+      }
+
+      axios.post(`${this.apiBaseUrl}/comments`, data)
+        .then((response) => {
+          console.log(response)
+
+          if(response.status === 201) {
+            this.project.comments.push(response.data);
+          }
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     },
     commentDate(comment_date) {
       const commentDate = new Date(comment_date);
