@@ -69,7 +69,7 @@ export default {
           <form @submit.prevent="sendComment">
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
-              <input type="text" class="form-control" id="authoe" v-model="formData.author">
+              <input type="text" class="form-control" id="author" v-model="formData.author">
             </div>
             <div class="mb-3">
               <label for="content" class="form-label">Text</label>
