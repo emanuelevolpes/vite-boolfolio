@@ -10,7 +10,11 @@ export default {
       },
       project: null,
       isError: false,
-      errorMessage: null
+      errorMessage: null,
+      formData: {
+        author: '',
+        content: ''
+      }
     }
   },
   methods: {
@@ -57,7 +61,23 @@ export default {
           </li>
         </ul>
         <div>
-          form per inserimento commento
+
+          <hr>
+          <h3>New Comment</h3>
+          <form>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" id="authoe" v-model="formData.author">
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Text</label>
+              <textarea class="form-control" id="content" rows="3" v-model="formData.content"></textarea>
+            </div>
+            <button class="btn btn-success">Send Comment</button>
+          </form>
+
+
+
         </div>
       </div>
     </div>
