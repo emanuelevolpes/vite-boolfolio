@@ -18,6 +18,9 @@ export default {
     }
   },
   methods: {
+    sendComment() {
+      console.log(this.formData); 
+    },
     commentDate(comment_date) {
       const commentDate = new Date(comment_date);
       return commentDate.toLocaleString();
@@ -61,10 +64,9 @@ export default {
           </li>
         </ul>
         <div>
-
           <hr>
           <h3>New Comment</h3>
-          <form>
+          <form @submit.prevent="sendComment">
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
               <input type="text" class="form-control" id="authoe" v-model="formData.author">
@@ -75,9 +77,6 @@ export default {
             </div>
             <button class="btn btn-success">Send Comment</button>
           </form>
-
-
-
         </div>
       </div>
     </div>
